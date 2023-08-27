@@ -22,4 +22,16 @@ To set up this project locally, follow these steps:
     ```
 
 These steps will ensure that you have a local copy of the project, are inside the project folder, and have all the required dependencies installed. This will set you up to run and work with the project on your own machine.
+Usage
+
+Once you have installed the dependencies, you can train and evaluate the credit default prediction model using the provided Jupyter notebook. Run the notebook credit_default_prediction.ipynb and follow the instructions to preprocess the data, train the model, and generate predictions.
+Model
+
+The machine learning model used for best accuracy in credit default prediction is [LightGBM ]. It has been chosen due to its ability to handle complex relationships within the data and its robust performance in classification tasks.
+
+## Results
+
+Our trained model achieved [93.8% Validation Accuracy] on the test dataset and got us in the top 13% in the kaggle leaderboard. These results demonstrate the effectiveness of our approach in predicting credit defaults
+
+Happy predicting!
 
