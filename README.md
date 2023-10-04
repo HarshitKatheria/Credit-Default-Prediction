@@ -1,37 +1,117 @@
-## Credit-Default-Prediction
-## Introduction:
-Credit default remains a significant concern within the financial landscape, impacting businesses and individuals alike. Timely prediction of credit default holds the potential to mitigate financial risks and optimize lending decisions. This report is centered around developing a machine learning-driven framework for credit default prediction based on relevant financial attributes. The objective is to construct an accurate and efficient system capable of assisting financial institutions in evaluating the likelihood of credit default. By analysing a range of financial parameters, this study aims to forecast whether a credit applicant is prone to defaulting, employing a suite of machine learning classification models including Logistic Regression, Decision Trees, Random Forest, and more.
+# Credit Default Prediction
+
+![](https://images.unsplash.com/photo-1589758438368-0ad531db3366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Files in this Repository](#files-in-this-repository)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Welcome to the Credit Default Prediction project! This repository contains a machine learning model for predicting credit default risks. Credit default prediction is crucial in the financial industry to assess the likelihood of a borrower failing to repay their debt.
+
+In this project, we've developed a predictive model that takes various financial and personal attributes of borrowers as input and predicts whether they are likely to default on their credit.
+
+## Files in this Repository
+
+- `EDA.ipynb`: Jupyter Notebook containing exploratory data analysis of the dataset.
+- `LICENSE`: The project's license file.
+- `README.md`: The main README file that provides an overview of the project.
+- `main.ipynb`: Jupyter Notebook containing the main code for the credit default prediction model.
+- `requirements.txt`: File listing the required Python packages for this project.
+- `streamlit_app.py`: Python script for creating a Streamlit web application for the model.
+- `webappmodel.joblib`: A trained machine learning model saved as a joblib file.
+
 ## Dataset
-The dataset used for this project can be found [here](https://www.kaggle.com/c/GiveMeSomeCredit/discussion?sort=votes). It includes a comprehensive set of features such as borrower's income, employment status, credit history, loan amount, and more. The dataset is preprocessed and cleaned to ensure the accuracy of the predictive models.
+
+We used the [GiveMeSomeCredit dataset](https://www.kaggle.com/c/GiveMeSomeCredit) from Kaggle for training and evaluation. This dataset contains the following features:
+
+- `RevolvingUtilizationOfUnsecuredLines`: This feature represents the total balance on credit cards and personal lines of credit, divided by the sum of credit limits. It is a measure of how much credit is being used relative to the total available credit.
+
+- `age`: The age of the borrower.
+
+- `NumberOfTime30-59DaysPastDueNotWorse`: The number of times the borrower has been 30-59 days past due (but not worse) on any credit obligation in the last two years.
+
+- `DebtRatio`: This feature represents the monthly debt payments, including alimony and living costs, divided by the monthly gross income.
+
+- `MonthlyIncome`: The monthly income of the borrower.
+
+- `NumberOfOpenCreditLinesAndLoans`: The number of open credit lines (e.g., credit cards or loans) the borrower has.
+
+- `NumberOfTimes90DaysLate`: The number of times the borrower has been 90 days or more past due on any credit obligation.
+
+- `NumberRealEstateLoansOrLines`: The number of real estate loans or lines of credit the borrower has.
+
+- `NumberOfTime60-89DaysPastDueNotWorse`: The number of times the borrower has been 60-89 days past due (but not worse) on any credit obligation in the last two years.
+
+- `NumberOfDependents`: The number of dependents the borrower has.
+
+The target variable for this dataset is:
+
+- `SeriousDlqin2yrs`: This is a binary target variable. It indicates whether a borrower experienced a serious delinquency (1) or not (0) within two years.
+
+Before running the code, make sure to download and place the dataset in the `data` directory.
+
+
 ## Installation
-To set up this project locally, follow these steps:
 
-1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/HarshitKatheria/Credit-Default-Prediction.git
-    ```
+To run this project locally, follow these steps:
 
-2. **Navigate to the Project Directory:**
-    ```bash
-    cd Credit-Default-Prediction
-    ```
+1. Clone the repository:
 
-3. **Install the Required Dependencies For Web App Using Streamlit:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   git clone https://github.com/HarshitKatheria/Credit-Default-Prediction.git
+   cd Credit-Default-Prediction
+   ```
 
-These steps will ensure that you have a local copy of the project, are inside the project folder, and have all the required dependencies installed. This will set you up to run and work with the project on your own machine.
-Usage
+2. Install the required python packages:
+```bash
+pip install -r requirements.txt
+```
+3. Run the project:
+```bash
+python main.py
+```
+## Web Application
 
-Once you have installed the dependencies, you can train and evaluate the credit default prediction model using the provided Jupyter notebook. Run the notebook credit_default_prediction.ipynb and follow the instructions to preprocess the data, train the model, and generate predictions.
-Model
+We've created a web application for this credit default prediction model using Streamlit. With the web app, you can easily interact with and make predictions using the trained model.
 
-The machine learning model used for best accuracy in credit default prediction is [LightGBM ]. It has been chosen due to its ability to handle complex relationships within the data and its robust performance in classification tasks.
+To run the web application locally, follow these steps:
 
-## Results
+1. Make sure you've completed the [Installation](#installation) steps to set up the project on your machine.
 
-Our trained model achieved [93.8% Validation Accuracy] on the test dataset and got us in the top 13% in the kaggle leaderboard. These results demonstrate the effectiveness of our approach in predicting credit defaults
+2. Open a terminal and navigate to the project directory.
 
-Happy predicting!
+3. Run the Streamlit app with the following command:
+
+   ```bash
+   streamlit run streamlit_app.py
+
+## Usage
+
+To use the credit default prediction model, follow these steps:
+
+1. Install the project as mentioned in the [Installation](#installation) section.
+
+2. Open the `main.ipynb` Jupyter Notebook where you've performed the modeling.
+
+3. Preprocess your data within the `main.ipynb` notebook if you have your own dataset. You can use the provided dataset as a reference.
+
+4. Train the model within the `main.ipynb` notebook using your data.
+
+5. Evaluate the model within the `main.ipynb` notebook. Assess its performance and make predictions on new data as needed.
+
+# License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Feel free to reach out if you have any questions or need further assistance with this project. Happy predicting!
+
+
 
