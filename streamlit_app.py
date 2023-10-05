@@ -4,7 +4,7 @@ import joblib
 
 # Load the pre-trained LightGBM model using joblib
 # model = joblib.load('HarshitModel.joblib')
-model = joblib.load('webappmodel.joblib')
+model = joblib.load('GiveMeSomeCredit.joblib')
 
 # Create a function to predict using the model
 def predict_default_probability(features):
