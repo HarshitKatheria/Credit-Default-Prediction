@@ -92,6 +92,13 @@ To run the web application locally, follow these steps:
 
    ```bash
    streamlit run streamlit_app.py
+   ```
+   
+
+https://github.com/HarshitKatheria/Credit-Default-Prediction/assets/123855321/4cb94eba-46c9-462b-9632-0b298f33412f
+
+
+
 
 ## Usage
 
